@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Webpage Title -->
+    <title>나홀로 쇼핑몰</title>
+
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+
+    <!-- 구글폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        * {
+            font-family: 'Stylish', sans-serif;
+        }
+
+        .wrap {
+            width: 500px;
+            margin: auto;
+        }
+
+        .img {
+            background-image: url('http://img.newspim.com/news/2018/08/22/1808221052503021.jpg');
+            background-size: cover;
+            background-position: center;
+            width: 500px;
+            height: 300px;
+        }
+
+        .info {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        h1, h5 {
+            display: inline;
+        }
+
+        .order {
+            text-align: center;
+        }
+
+        .orders {
+            margin-top: 40px;
+        }
+    </style>
+
+    <script>
+        function order() {
+            alert('예약이 완료되었습니다.');
+        }
+
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <div class="info">
+        <h5>방문을 환영합니다!</h5> <br/>
+        <h1>하이디라오 예약시작하기</h1><br/>
+        <div class="img"></div><br/>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">예약자 이름</span>
+            </div>
+            <input type="text" class="form-control" id="order-name">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">전화번호</span>
+            </div>
+            <input type="text" class="form-control" id="order-name">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text">인원</label>
+            </div>
+            <select class="custom-select" id="order-count">
+                <option selected value=""> -- 인원수를 선택해주세요. --</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="3">4</option>
+            </select>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text">방문시간</label>
+            </div>
+            <select class="custom-select" id="order-count">
+                <option selected value=""> -- 방문시간을 선택해주세요. --</option>
+                <option value="1">12:00-13:00</option>
+                <option value="2">13:00-14:00</option>
+                <option value="3">15:00-16:00</option>
+                <option value="3">16:00-17:00</option>
+            </select>
+        </div>
+
+        <div class="order">
+            <button onclick="order()" type="button" class="btn btn-primary">예약하기</button>
+        </div>
+
+        <div class="orders">
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">이름</th>
+                    <th scope="col">전화번호</th>
+                    <th scope="col">인원</th>
+                    <th scope="col">방문시간</th>
+                </tr>
+                </thead>
+                <tbody id="orders-box">
+                <tr>
+                    <td>김보미</td>
+                    <td>010-1234-5678</td>
+                    <td>2</td>
+                    <td>12:00-13:00</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
